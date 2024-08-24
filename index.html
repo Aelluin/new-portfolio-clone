@@ -15,10 +15,12 @@
     <link rel="stylesheet" href="/owl.theme.default.min.css">
 
 
+
     <!-- MAIN STYLE -->
     <link rel="stylesheet" href="/tooplate-style.css">
     <script src="http://localhost:35729/livereload.js"></script>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
 
 
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
@@ -36,6 +38,228 @@ https://www.tooplate.com/view/2115-marvel
 </head>
 
 <body>
+    <style>
+        @media (max-width: 768px) {
+            .col-lg-7 {
+                /* Full width for mobile view */
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                /* Center items horizontally */
+                text-align: center;
+                /* Center text for mobile view */
+            }
+            .about-text {
+                padding: 1rem;
+                /* Add padding for better spacing on mobile */
+            }
+            .animated-info {
+                /* Stack items vertically and ensure they are not centered */
+                display: block;
+                /* Ensure block layout for mobile */
+                margin: 1rem 0;
+                /* Add margin for spacing between items */
+            }
+            .animated-item {
+                display: block;
+                /* Ensure each item takes up full width */
+                margin-bottom: 0.5rem;
+                /* Add space between items */
+            }
+            .about-text p {
+                /* Adjust font size and spacing for mobile view */
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+        }
+        
+        .animated-info {
+            /* Ensure no additional styles affecting spacing */
+            margin: 0;
+        }
+        
+        .animated-item {
+            display: block;
+            /* Stack items vertically */
+            margin-bottom: 0.5rem;
+            /* Space between items */
+        }
+        
+        .about-text p {
+            margin-top: 1rem;
+            /* Adjust the margin-top as needed to create space between text */
+        }
+        /* Mobile Specific Adjustments */
+        
+        @media (max-width: 768px) {
+            .about-text p {
+                margin-top: 2.5rem;
+                /* More space for mobile view if necessary */
+                font-size: 1rem;
+                /* Adjust font size for mobile */
+                line-height: 1.5;
+                /* Improve readability */
+            }
+        }
+        /* General Responsive Enhancements */
+        
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        /* Navbar */
+        
+        .navbar {
+            padding: 1rem;
+        }
+        
+        .navbar-brand {
+            font-size: 1.5rem;
+        }
+        
+        .navbar-nav .nav-link {
+            font-size: 1rem;
+        }
+        
+        .navbar-toggler {
+            border: none;
+        }
+        /* About Section */
+        
+        .about {
+            padding: 5rem 1rem;
+        }
+        
+        .about .about-text {
+            margin-right: 0;
+        }
+        
+        .about .about-image {
+            text-align: center;
+        }
+        
+        .about .about-image img {
+            max-width: 100%;
+        }
+        /* Projects Section */
+        
+        .project {
+            margin-bottom: 2rem;
+        }
+        
+        .thumbnail img {
+            border-radius: 15px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        /* Resume Section */
+        
+        .timeline {
+            margin-top: 2rem;
+        }
+        
+        .timeline-wrapper {
+            margin-bottom: 2rem;
+        }
+        
+        .timeline-yr {
+            font-size: 1.2rem;
+        }
+        
+        .timeline-info h3 {
+            font-size: 1.1rem;
+        }
+        /* Contact Form */
+        
+        .contact-form {
+            padding: 2rem;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+        
+        .submit-btn {
+            background-color: #ffc200;
+            border: none;
+            color: #fff;
+            font-size: 1rem;
+            padding: 0.75rem;
+            cursor: pointer;
+        }
+        /* Mobile Devices */
+        
+        @media (max-width: 768px) {
+            .navbar-brand {
+                font-size: 1.25rem;
+            }
+            .navbar-nav .nav-link {
+                font-size: 0.9rem;
+            }
+            .about {
+                padding: 3rem 1rem;
+            }
+            .about .about-text {
+                margin-right: 0;
+            }
+            .about .about-image img {
+                max-width: 90%;
+            }
+            .project-title {
+                font-size: 2rem;
+            }
+            .contact-form {
+                padding: 1rem;
+            }
+            .submit-btn {
+                font-size: 0.875rem;
+            }
+        }
+        /* Smaller Devices */
+        
+        @media (max-width: 576px) {
+            .navbar-brand {
+                font-size: 1rem;
+            }
+            .navbar-nav .nav-link {
+                font-size: 0.8rem;
+            }
+            .about {
+                padding: 2rem 1rem;
+            }
+            .about h1 {
+                font-size: 2rem;
+            }
+            .contact-form input,
+            .contact-form textarea {
+                font-size: 0.875rem;
+            }
+            .submit-btn {
+                font-size: 0.75rem;
+            }
+        }
+        /* Add top margin to the row to create space after the navbar */
+        
+        .row {
+            margin-top: 4rem;
+            /* Adjust this value to fit your design */
+        }
+        /* Alternatively, you can add padding to the container */
+    </style>
 
     <!-- MENU -->
     <nav class="navbar navbar-expand-sm navbar-light">
@@ -68,10 +292,10 @@ https://www.tooplate.com/view/2115-marvel
                     <div class="ml-lg-4">
                         <div class="color-mode d-lg-flex justify-content-center align-items-center">
                             <i class="color-mode-icon"></i>
-
                         </div>
                     </div>
                 </ul>
+
             </div>
         </div>
     </nav>
@@ -238,6 +462,7 @@ https://www.tooplate.com/view/2115-marvel
                         .project-title {
                             font-size: 2.9rem;
                         }
+                        /* portfolio styles */
                     </style>
                     <h2 class="project-title">Some of the projects I did:</h2>
                 </div>
@@ -445,58 +670,116 @@ https://www.tooplate.com/view/2115-marvel
             </div>
         </div>
     </section>
-
     <!-- FOOTER -->
     <style>
         footer {
             padding-top: 5rem;
         }
+        /* Socials Container */
         
         footer .socials {
             display: flex;
-            align-items: center;
+            flex-wrap: wrap;
+            /* Allow items to wrap on small screens */
             justify-content: center;
+            padding: 1rem 0;
+            /* Adjust padding for better spacing */
         }
         
         footer .socials ul {
             display: flex;
-            gap: 3rem;
+            flex-wrap: wrap;
+            /* Allow items to wrap on smaller screens */
+            gap: 1rem;
+            /* Reduce gap for smaller screens */
+            justify-content: center;
+            padding: 0;
+            list-style: none;
         }
+        
+        footer .socials ul li {
+            margin: 0;
+            /* Remove default margin */
+        }
+        /* Social Links */
         
         footer .container ul a {
             color: var(--color-dark);
             transition: var(--transition);
+            font-size: 1.5rem;
+            /* Adjust size for better touch accessibility */
         }
         
         footer .container ul a:hover {
             color: var(--color-primary);
         }
-        
-        footer .container .socials {
-            display: flex;
-            gap: 3rem;
-            padding-top: 4rem;
-        }
+        /* Social Icons */
         
         footer .container .socials a {
             color: #474559;
             padding: 0.8rem;
             border-radius: 50%;
             transition: var(--transition);
+            font-size: 1.5rem;
+            /* Ensure icons are large enough for touch */
         }
         
         footer .container .socials a:hover {
             background: var(--color-golden-brown);
             color: var(--color-white);
         }
+        /* Copyright */
         
         footer .copyright {
             color: #474559;
             text-align: center;
-            margin-top: -0rem;
-            padding: 2rem 0;
-            padding-bottom: 3rem;
-            font-size: 0.8;
+            padding: 1rem 0;
+            /* Adjust padding for better spacing */
+            font-size: 0.875rem;
+            /* Adjust font size for readability */
+        }
+        /* Mobile Devices */
+        
+        @media (max-width: 768px) {
+            footer .socials {
+                padding-top: 2rem;
+                /* Adjust padding for smaller screens */
+            }
+            footer .socials ul {
+                gap: 1rem;
+                /* Reduce gap */
+            }
+            footer .container .socials a {
+                font-size: 1.25rem;
+                /* Smaller icon size for mobile */
+            }
+            footer .copyright {
+                font-size: 0.75rem;
+                /* Adjust font size */
+                padding: 1rem 0;
+                /* Adjust padding */
+            }
+        }
+        
+        @media (max-width: 576px) {
+            footer .socials {
+                padding-top: 1rem;
+                /* Further reduce padding for very small screens */
+            }
+            footer .socials ul {
+                gap: 0.5rem;
+                /* Further reduce gap */
+            }
+            footer .container .socials a {
+                font-size: 1rem;
+                /* Smaller icon size for very small screens */
+            }
+            footer .copyright {
+                font-size: 0.6875rem;
+                /* Further adjust font size */
+                padding: 0.5rem 0;
+                /* Further adjust padding */
+            }
         }
     </style>
     <footer>
